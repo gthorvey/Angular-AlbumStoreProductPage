@@ -45,7 +45,12 @@ describe('AppComponent', () => {
       }
     });
 
-    if (!routerOutletFound && !productListFound) {
+    /** if (!routerOutletFound && !productListFound) {
+      since('We couldn\'t find the ProductPageComponent -
+      are you sure you added the right selector to the AppComponent?').expect(productPageFound).toBe(1);
+    } */
+    
+    if (!productPageFound) {
       since('We couldn\'t find the ProductPageComponent - are you sure you added the right selector to the AppComponent?').expect(productPageFound).toBe(1);
     }
   }));
